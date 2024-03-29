@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { RouterLinkWithHref } from '@angular/router';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-header',
   standalone: true,
   imports: [RouterLinkWithHref],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  templateUrl: './header.component.html',
+  styleUrl: './header.component.scss'
 })
-export class HomeComponent {
+export class HeaderComponent {
 
 }

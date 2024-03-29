@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+:root{
+    --electric-pink: #ed297a;  
+    --dark-green: #1f685d;
+    --neutral-black: #292929;
+    --neutral-gray:#252525;
+    --antique-brass: #cf9c78;
+    --beau-blue: #b8daf2;
+    --orange: #ff6947;
+    --azure-blue: #0082f0;
+    --shiny-green: #54b582;
+    --apricot: #facabb;
+    --platinum: #e4e4e4;   
+    --opal: #9ec4b8;
+    --yellow-orange: #fcb230;
+    --white: #fff;
+    --floral-white: #F7F1EC;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 62.5%;
+}

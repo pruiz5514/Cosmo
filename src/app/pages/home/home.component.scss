@@ -1,0 +1,58 @@
+body{
+    background-color: var(--beau-blue);
+}
+
+header{
+    display: flex;
+    width: 100%;
+    height: 75px;
+    background-color: var(--beau-blue);
+    padding-left: 15px;
+    align-items: center;
+
+    .cosmoLogo-container{
+        width: 120px;
+    }
+    .cosmoLogo{
+        width: 100%;
+    }
+}
+
+main{
+    padding: 15px 0;
+    width: 100%;
+    height: calc(100vh - 145px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+    .astronauta-container{
+        padding: 15px;
+        max-width: 400px;
+        min-width: 200px;
+        
+    }
+    .astronauta{
+        max-width: 100%;
+        
+    }
+    .empiezaAhora-button{
+        margin-top: 30px;
+        width: 270px;
+        height: 50px;
+        font-size: 20px;
+        font-weight: bold;
+        border: none;
+        border-radius: 15px;
+        background-color: var(--azure-blue);
+        color: var(--white);
+        cursor: pointer;
+    }
+}
+
+footer{
+    width: 100%;
+    height: 70px;
+}

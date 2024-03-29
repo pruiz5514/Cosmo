@@ -1,0 +1,15 @@
+header{
+    display: flex;
+    width: 100%;
+    height: 75px;
+    background-color: var(--beau-blue);
+    padding-left: 15px;
+    align-items: center;
+
+    .cosmoLogo-container{
+        width: 120px;
+    }
+    .cosmoLogo{
+        width: 100%;
+    }
+}

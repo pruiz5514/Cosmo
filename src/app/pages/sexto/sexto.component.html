@@ -1,1 +1,17 @@
-<p>sexto works!</p>
+<app-header/>
+<main>
+    <section>
+        <h1>Ejercicios</h1>
+        <div>
+            <ul>
+                <li *ngFor="let pregunta of preguntas()">
+                    <p>Pregunta {{pregunta.id}} </p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <aside>
+        <h2>Tu progreso</h2>
+    </aside>
+</main>
+<app-footer/>

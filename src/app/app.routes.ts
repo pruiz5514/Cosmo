@@ -7,7 +7,7 @@ import { OctavoComponent } from './pages/octavo/octavo.component'
 
 export const routes: Routes = [
     {
-        path: '',
+        path: 'inicio',
         component: HomeComponent
     },
     {
@@ -25,5 +25,8 @@ export const routes: Routes = [
     {
         path: 'octavo',
         component: OctavoComponent
-    }
+    },
+   //por defecto aparecerá la pagina de inicio  
+   { path: '',redirectTo:'/inicio', pathMatch:'full'}
+
 ];

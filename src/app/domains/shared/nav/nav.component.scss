@@ -1,0 +1,29 @@
+nav {
+    background-color: var(--white);
+    height: 75px;
+
+    .leftNav{
+        display: flex;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+
+        .cosmoLogo-container{
+            width: 120px;
+        }
+        .cosmoLogo{
+            width: 100%;
+        }
+    }
+
+
+
+}
+
+    /*
+    position: fixed;
+    top: 75px;
+    left: 0;
+    right: 0;
+    background: red;
+    */

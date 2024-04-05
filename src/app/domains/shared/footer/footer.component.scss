@@ -1,57 +1,63 @@
 footer{
-    display: flex;
     width: 100%;
-    padding: 30px 0;
     background-color: var(--neutral-black);
+    padding-top: 40px;
+    padding-bottom: 20px;
 
-    .leftFooter-container{
+    .elementos{
         display: flex;
-        flex-direction: column;
-        width: 50%;
-        padding: 0 30px;
-        font-size: 16px;
-        color: var(--platinum);
-        margin-left: 170px;
-        
-        a{
-            text-decoration: none;
-            color: #551A8B;
-        }
-    }
+        width: 90%;
+        margin: 0 auto;
 
-    .rightFooter-container{
-        width: 50%;
-
-        .socialMedias{
+        .leftFooter-container{
             display: flex;
-            width: 100%;
-            align-items: center;
-            justify-content: center;
-            ul{
+            flex-direction: column;
+            width: 50%;
+            font-size: 16px;
+            color: var(--platinum);
+            padding-left: 10px;
+           
+            a{
+                text-decoration: none;
+                color: #551A8B;
+            }
+        }
+     
+        .rightFooter-container{
+            width: 50%;
+     
+            .socialMedias{
                 display: flex;
-                list-style: none;
-                gap: 35px;
-
-                a{
-                    text-decoration: none;
-                    font-size: 36px;
-                    color: var(--white);
+                width: 100%;
+                align-items: center;
+                justify-content: end;
+                ul{
+                    display: flex;
+                    list-style: none;
+                    gap: 35px;
+     
+                    a{
+                        text-decoration: none;
+                        font-size: 36px;
+                        color: var(--white);
+                    }
                 }
             }
-        }
-        .logoFooter-container{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-
-            figure{
-                width: 300px;
-            }
-            img{
-                width: 80%;
-                margin-left: 50px;
+            .logoFooter-container{
+                display: flex;
+                justify-content: end;
+                align-items: center;
+                width: 100%;
+     
+                figure{
+                    img{
+                        width: 80%;
+                    }
+                }
+                
             }
         }
     }
+ 
+    
 }

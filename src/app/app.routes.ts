@@ -26,5 +26,13 @@ export const routes: Routes = [
     {
         path: 'octavo',
         component: OctavoComponent
-    }
+    },
+    {
+        path: 'ejercicios/:grado',
+        component: EjerciciosComponent
+    },
+
+    //por defecto aparecerá la pagina de inicio  
+   { path: '',redirectTo:'/inicio', pathMatch:'full'}
+
 ];

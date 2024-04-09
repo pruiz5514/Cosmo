@@ -11,7 +11,7 @@ import { Observable, map } from 'rxjs';
 })
 export class EjerciciosComponent {
   constructor(route:ActivatedRoute){
-    const id: Observable<string> = route.params.pipe(map((p) => p['id']));
-    id.subscribe((id) => {console.log(id)})
+    const grado: Observable<string> = route.params.pipe(map((p) => p['grado']));
+    grado.subscribe((grado) => {console.log(grado)})
   }
 }

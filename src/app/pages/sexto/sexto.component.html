@@ -2,10 +2,10 @@
 <main>
     <section>
         <h1>Ejercicios</h1>
-        <div>
-            <ul>
+        <div class="ejercicios-contenedor">
+            <ul class="listaEjercicios">
                 <li *ngFor="let pregunta of preguntas()">
-                    <p>Pregunta {{pregunta.id}} </p>
+                    <a [routerLink]="['/ejercicios',pregunta.id]"><button class="butonEjercicios"> Ejercicio #{{pregunta.id}} </button></a>
                 </li>
             </ul>
         </div>

@@ -4,6 +4,7 @@ import { CursosComponent } from './pages/cursos/cursos.component'
 import { SextoComponent } from './pages/sexto/sexto.component'
 import { SeptimoComponent } from './pages/septimo/septimo.component'
 import { OctavoComponent } from './pages/octavo/octavo.component'
+import { EjerciciosComponent } from './pages/ejercicios/ejercicios.component';
 
 export const routes: Routes = [
     {
@@ -25,8 +26,5 @@ export const routes: Routes = [
     {
         path: 'octavo',
         component: OctavoComponent
-    },
-   //por defecto aparecerá la pagina de inicio  
-   { path: '',redirectTo:'/inicio', pathMatch:'full'}
-
+    }
 ];

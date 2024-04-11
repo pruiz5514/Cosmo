@@ -28,7 +28,7 @@ export const routes: Routes = [
         component: OctavoComponent
     },
     {
-        path: 'ejercicios/:grado',
+        path: 'ejercicios/:codigo',
         component: EjerciciosComponent
     },
 

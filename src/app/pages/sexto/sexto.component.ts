@@ -4,11 +4,12 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '../../domains/shared/header/header.component';
 import { FooterComponent } from '../../domains/shared/footer/footer.component';
 import { Preguntas } from './../../models/preguntas.models'
+import { NavComponent } from '../../domains/shared/nav/nav.component';
 
 @Component({
   selector: 'app-sexto',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent, RouterLinkWithHref, CommonModule],
+  imports: [NavComponent, FooterComponent, RouterLinkWithHref, CommonModule],
   templateUrl: './sexto.component.html',
   styleUrl: './sexto.component.scss'
 })

@@ -2,8 +2,9 @@ nav {
     background-color:var( --white);
     height: 75px;
     font-family: "Roboto", sans-serif;
+    width: 100%;
 
-    .elementos{
+    .elementosee{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -13,18 +14,24 @@ nav {
         
         
     }
+    
 
-    .leftNav{
-        display: flex;
-        align-items: center;
-        width: 50%;
-        height: 100%;
+    .elementos{
+        width: 90%;
+        margin: 0 auto;
 
-        .cosmoLogo-container{
-            width: 120px;
-        }
-        .cosmoLogo{
-            width: 100%;
+        .leftNav{
+            display: flex;
+            align-items: center;
+            width: 50%;
+            height: 100%;
+    
+            .cosmoLogo-container{
+                width: 120px;
+            }
+            .cosmoLogo{
+                width: 100%;
+            }
         }
     }
     

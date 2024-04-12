@@ -5,7 +5,7 @@ import { Preguntas } from '../../../models/preguntas.models';
   providedIn: 'root'
 })
 export class PreguntasCursosService {
-  preguntas = signal <Preguntas[]>([
+  preguntas: Preguntas[] =([
     {
       grado: 'sexto',
       codigo: 'sexto-1',

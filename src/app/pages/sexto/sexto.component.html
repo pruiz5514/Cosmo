@@ -4,7 +4,7 @@
         <h1>Ejercicios</h1>
         <div class="ejercicios-contenedor">
             <ul class="listaEjercicios">
-                <li *ngFor="let pregunta of preguntas()">
+                <li *ngFor="let pregunta of preguntas">
                     <a [routerLink]="['/ejercicios',pregunta.codigo]"><button class="butonEjercicios"> Ejercicio #{{pregunta.id}} </button></a>
                 </li>
             </ul>

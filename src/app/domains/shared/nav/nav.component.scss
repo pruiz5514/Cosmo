@@ -7,10 +7,10 @@ nav {
     .elementosee{
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         align-items: center;
         justify-content: space-between;
-        width:80%;
+        width:100%;
         
         
     }
@@ -117,6 +117,7 @@ nav {
                     align-items: flex-start;
                     flex-direction: column;
                     
+                    
                     .saludo{
                         font-family: inherit;
                         color: var(--black);
@@ -134,6 +135,7 @@ nav {
                             color:var(--neutral-gray);
                             font-weight: 400;
                             line-height: 1;
+                            width: 100%;
                         }
 
                         .barraProgreso{

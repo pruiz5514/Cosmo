@@ -1,0 +1,213 @@
+<nav class="navbar  fixed-top">
+  <div class="container-fluid elementos">
+
+    <div class="elementosee">
+      <section class="leftNav">
+        <a routerLink="/cursos">
+          <figure class="cosmoLogo-container">
+            <img class="cosmoLogo" src="./../../../../assets/img/cosmoLogo.png" alt="Cosmo logo">
+          </figure>
+        </a>
+      </section>
+
+      <section class="contadores">
+        <div class="contadorEstrellas">
+          <span class="agrupadorTituloContador"><span>Total Estrellas </span> <i class="bi bi-star"></i></span>
+          <span class="numeros">10/100</span>
+        </div>
+
+        <div class="contadorXp">
+          <span class="agrupadorTituloContador"><span>Total XP </span> <i class="bi bi-trophy"></i></span>
+          <span class="numeros">12491</span>
+        </div>
+
+      </section>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+
+        <section class="rightNav">
+
+          <div class="bigOne">
+            <h1 class="saludo">Juan Perez </h1>
+            <div class="littleOne"> <span class="barraProgreso"></span><span class="progreso">progreso 10% </span>
+            </div>
+          </div>
+
+          <div>
+            <img class="profileImg" src="./../../../../assets/img/profile.webp" alt="Imagen de perfil">
+          </div>
+
+
+        </section>
+
+      </button>
+    </div>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Inicio</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+
+
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/inicio" routerLinkActive="active"
+              ariaCurrentWhenActive="page">Perfil</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">Cerrar sesión</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+    </div>
+</nav>
+
+<!--
+         </section>
+    <div class="container-fluid elementos" >
+        <section class="leftNav">
+            <a routerLink="/cursos">
+                <figure class="cosmoLogo-container">
+                    <img class="cosmoLogo" src="./../../../../assets/img/cosmoLogo.png" alt="Cosmo logo">
+                </figure>
+            </a>
+        </section>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span>
+        <section class="rightNav">
+          <ul>
+              <li>Progreso 0%</li>
+              <li>Juan Perez <span class="profileImg"></span></li>
+          </ul>
+        </section> </span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1"  id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Ejemplo de login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" routerLink="/inicio" routerLinkActive="active"  ariaCurrentWhenActive="page">Perfil</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">Cerrar sesión</a>
+            </li>
+          </ul>
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+  -->
+
+<!-- Versión 2
+
+  <nav class="navbar  fixed-top">
+    <div class="container-fluid">
+        <section class="leftNav">
+            <a routerLink="/cursos">
+                <figure class="cosmoLogo-container">
+                    <img class="cosmoLogo" src="./../../../../assets/img/cosmoLogo.png" alt="Cosmo logo">
+                </figure>
+            </a>
+        </section>
+      <button class="" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <section class="rightNav">
+          
+
+             <div class="bigOne">
+              <p>Juan Perez </p>
+              <p>Progreso 0%</p>
+             </div>
+
+             <div>
+              <p class="profileImg"></p>
+             </div>
+
+        </section>
+
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1"  id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Ejemplo de login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" routerLink="/inicio" routerLinkActive="active"  ariaCurrentWhenActive="page">Perfil</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">Cerrar sesión</a>
+            </li>
+          </ul>
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  otro
+<nav class="navbar sticky-top ">
+  
+  otroo
+  <nav class="navbar sticky-top ">
+    <div class="container-fluid">
+        <section class="leftNav">
+            <a routerLink="/cursos">
+                <figure class="cosmoLogo-container">
+                    <img class="cosmoLogo" src="./../../../../assets/img/cosmoLogo.png" alt="Cosmo logo">
+                </figure>
+            </a>
+        </section>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" >
+        <section class="rightNav">
+          
+
+             <div class="bigOne">
+              <p>Juan Perez </p>
+              <p>Progreso 0%</p>
+             </div>
+
+             <div>
+              <img class="profileImg" src="./../../../../assets/img/profile.webp" alt="Imagen de perfil">
+             </div>
+
+        </section>
+      </button>
+
+      <div class="offcanvas offcanvas-end" tabindex="-1"  id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+       
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Ejemplo de login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+       
+        <div class="offcanvas-body">
+          <ul class="navbar-nav ">
+            <li class="nav-item active">
+              <a class="nav-link active" aria-current="page" routerLink="/inicio" routerLinkActive="active"  ariaCurrentWhenActive="page">Perfil</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">Cerrar sesión</a>
+            </li>
+          </ul>
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+  -->

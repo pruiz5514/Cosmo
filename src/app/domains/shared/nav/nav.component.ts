@@ -3,12 +3,12 @@ import { RouterLinkWithHref } from '@angular/router';
 
 
 @Component({
-  selector: 'app-header',
+  selector: 'app-nav',
   standalone: true,
   imports: [RouterLinkWithHref],
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  templateUrl: './nav.component.html',
+  styleUrl: './nav.component.scss'
 })
-export class HeaderComponent {
+export class NavComponent {
 
 }

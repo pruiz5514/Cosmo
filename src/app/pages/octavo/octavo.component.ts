@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { NavComponent } from '../../domains/shared/nav/nav.component';
 
 @Component({
   selector: 'app-octavo',
   standalone: true,
-  imports: [],
+  imports: [NavComponent],
   templateUrl: './octavo.component.html',
   styleUrl: './octavo.component.scss'
 })

@@ -1,4 +1,6 @@
 export interface Preguntas{
+    grado: string,
+    codigo: string
     id: number,
     competencia: string,
     enunciado: string,

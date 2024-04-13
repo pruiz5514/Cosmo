@@ -14,9 +14,11 @@ main{
 
     .respuestas-container{
         width: 100%;
+        height: auto;
         display: flex;
         flex-wrap: wrap;
-        padding-top: 35px;
+        padding-top: 30px;
+        padding-bottom: 50px;
         gap: 20px;
 
 
@@ -40,4 +42,22 @@ main{
             background-color: var(--electric-pink);
         }
     }
+
+    .verificarBoton-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .verificarBoton{
+            min-width: 200px;
+            height: 40px;
+            font-size: 16px;
+            border: none;
+            border-radius: 12px;
+            text-align: center;
+            padding: 0 15px;
+            color: var(--white);
+            background-color: var(--shiny-green);
+        }
+    }
+    
 }

@@ -44,6 +44,7 @@ export class EjerciciosComponent implements OnInit {
 
   cambiarColor(opcion:string):void{
     this.isClickedButton = opcion
+    console.log(this.isClickedButton)
   }
    
 }

@@ -11,6 +11,11 @@
             <button (click)="cambiarColor('c')" [ngClass]="{'boton-pregunta': isClickedButton !== 'c', 'boton-preguntaSeleccion': isClickedButton === 'c'}">C. {{arrayFiltrado[0].c}}</button>
             <button (click)="cambiarColor('d')" [ngClass]="{'boton-pregunta': isClickedButton !== 'd', 'boton-preguntaSeleccion': isClickedButton === 'd'}">D. {{arrayFiltrado[0].d}}</button>
         </div>
+
+        <div class="verificarBoton-container">
+            <button class="verificarBoton">Verificar respuesta</button>
+        </div>
+        
     </section>
 </main>
 <app-footer/>

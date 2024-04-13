@@ -1,11 +1,16 @@
 <app-header/>
 
 <main>
-    <ul>
-        <li *ngFor="let pregunta of arrayFiltrado">
-            <p>{{pregunta.filtrarPregunta}}</p>
-        </li>
-    </ul>
-</main>
+    <section class="pregunta-container">
+        <h3>{{arrayFiltrado[0].enunciado}}</h3>
+        <h3>{{arrayFiltrado[0].pregunta}}</h3>
 
+        <div class="respuestas-container">
+            <button>A. {{arrayFiltrado[0].a}}</button>
+            <button> B. {{arrayFiltrado[0].b}}</button>
+            <button>C. {{arrayFiltrado[0].c}}</button>
+            <button>D. {{arrayFiltrado[0].d}}</button>
+        </div>
+    </section>
+</main>
 <app-footer/>

@@ -17,5 +17,5 @@ import {PreguntasCursosService } from './../../domains/shared/services/preguntas
 export class SextoComponent {
 
   private preguntasCurso = inject(PreguntasCursosService) 
-  preguntas = this.preguntasCurso.preguntas 
+  preguntas = this.preguntasCurso.preguntasSexto 
 }

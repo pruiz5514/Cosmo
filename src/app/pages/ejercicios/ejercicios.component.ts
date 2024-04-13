@@ -22,24 +22,22 @@ export class EjerciciosComponent implements OnInit {
   // }
 
   private preguntasCurso = inject(PreguntasCursosService) 
-  preguntas = this.preguntasCurso.preguntas 
+  preguntas = this.preguntasCurso.preguntasSexto 
 
   nombreRuta: string | null = '';
   arrayFiltrado: any[] = [...this.preguntas]
 
   constructor(private route: ActivatedRoute) { }
 
+  filtrarPregunta(): void {
+    this.arrayFiltrado = this.preguntas.filter(pregunta => pregunta.codigo === this.nombreRuta);
+  }
+
   ngOnInit(): void {
     this.nombreRuta = this.route.snapshot.paramMap.get('codigo');
     console.log(this.nombreRuta);
+    this.filtrarPregunta()
   }
 
-  filtrarPregunta() {
-    this.arrayFiltrado?.filter(pregunta =>{
-      pregunta.codigo === this.nombreRuta
-      console.log(this.arrayFiltrado)
-      return this.arrayFiltrado
-    }
-  )
-  }
+  
 }

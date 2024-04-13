@@ -1,3 +1,36 @@
 main{
-    height: calc(100vh - 75px)
+    min-height: calc(100vh - 75px);
+    padding-top: 30px;
+}
+
+.pregunta-container{
+    width: 60%;
+    margin: 0 auto;
+    height: 100%;
+
+    h3{
+        padding-bottom: 10px;
+    }
+
+    .respuestas-container{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 35px;
+        gap: 20px;
+
+
+        button{
+            width: 45%;
+            min-width: 200px;
+            height: 40px;
+            font-size: 16px;
+            border: none;
+            background-color: var(--azure-blue);
+            color: var(--white);
+            border-radius: 12px;
+            text-align: start;
+            padding: 0 15px;
+        }
+    }
 }

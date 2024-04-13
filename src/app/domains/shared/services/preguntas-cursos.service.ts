@@ -5,7 +5,7 @@ import { Preguntas } from '../../../models/preguntas.models';
   providedIn: 'root'
 })
 export class PreguntasCursosService {
-  preguntas: Preguntas[] =([
+  preguntasSexto: Preguntas[] =([
     {
       grado: 'sexto',
       codigo: 'sexto-1',
@@ -30,6 +30,19 @@ export class PreguntasCursosService {
       b: '120.000 kW',
       c: '72.000 kW',
       d: '6.000 kW',
+      completed: false
+    },
+    {
+      grado: 'sexto',
+      codigo: 'sexto-3',
+      id: 3,
+      competencia: 'Resolución de problemas',
+      enunciado: 'Mario conduce el camión de una empresa de lácteos. Para transportar las cajas de leche él las empaca en canastillas como se muestra en la imagen.',
+      pregunta: '¿Cuántas cajas de leche se necesitan para llenar completamente la canastilla?',
+      a: '7',
+      b: '10',
+      c: '13',
+      d: '20',
       completed: false
     }
 ])

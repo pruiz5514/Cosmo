@@ -6,10 +6,10 @@
         <h3>{{arrayFiltrado[0].pregunta}}</h3>
 
         <div class="respuestas-container">
-            <button>A. {{arrayFiltrado[0].a}}</button>
-            <button> B. {{arrayFiltrado[0].b}}</button>
-            <button>C. {{arrayFiltrado[0].c}}</button>
-            <button>D. {{arrayFiltrado[0].d}}</button>
+            <button (click)="cambiarColor('a')" [ngClass]="{'boton-pregunta': isClickedButton !== 'a', 'boton-preguntaSeleccion': isClickedButton === 'a'}">A. {{arrayFiltrado[0].a}}</button>
+            <button (click)="cambiarColor('b')" [ngClass]="{'boton-pregunta': isClickedButton !== 'b', 'boton-preguntaSeleccion': isClickedButton === 'b'}"> B. {{arrayFiltrado[0].b}}</button>
+            <button (click)="cambiarColor('c')" [ngClass]="{'boton-pregunta': isClickedButton !== 'c', 'boton-preguntaSeleccion': isClickedButton === 'c'}">C. {{arrayFiltrado[0].c}}</button>
+            <button (click)="cambiarColor('d')" [ngClass]="{'boton-pregunta': isClickedButton !== 'd', 'boton-preguntaSeleccion': isClickedButton === 'd'}">D. {{arrayFiltrado[0].d}}</button>
         </div>
     </section>
 </main>

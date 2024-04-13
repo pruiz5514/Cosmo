@@ -26,11 +26,18 @@ main{
             height: 40px;
             font-size: 16px;
             border: none;
-            background-color: var(--azure-blue);
-            color: var(--white);
             border-radius: 12px;
             text-align: start;
             padding: 0 15px;
+            color: var(--white);
+        }
+
+        .boton-pregunta{
+            background-color: var(--azure-blue);
+        }
+
+        .boton-preguntaSeleccion{
+            background-color: var(--electric-pink);
         }
     }
 }

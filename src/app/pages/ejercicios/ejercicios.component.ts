@@ -39,5 +39,11 @@ export class EjerciciosComponent implements OnInit {
     this.filtrarPregunta()
   }
 
-  
+ 
+  isClickedButton: string | null = null;
+
+  cambiarColor(opcion:string):void{
+    this.isClickedButton = opcion
+  }
+   
 }

@@ -4,6 +4,7 @@ export interface Preguntas{
     id: number,
     competencia: string,
     enunciado: string,
+    imgEnunciado: string |null,
     pregunta: string,
     a: string | number,
     b: string | number,

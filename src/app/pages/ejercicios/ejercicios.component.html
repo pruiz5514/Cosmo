@@ -3,6 +3,10 @@
 <main>
     <section class="pregunta-container">
         <h3>{{arrayFiltrado[0].enunciado}}</h3>
+        <div class="preguntaImg-container">
+            <img *ngIf="arrayFiltrado[0].imgEnunciado" [src]="arrayFiltrado[0].imgEnunciado" alt="Imagen sexto">
+        </div>
+        
         <h3>{{arrayFiltrado[0].pregunta}}</h3>
 
         <div class="respuestas-container">

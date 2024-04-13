@@ -1,63 +1,81 @@
 main{
     min-height: calc(100vh - 75px);
-    padding-top: 30px;
-}
+    padding-top: 10px;
+    padding-bottom: 40px;
 
-.pregunta-container{
-    width: 60%;
-    margin: 0 auto;
-    height: 100%;
-
-    h3{
-        padding-bottom: 10px;
-    }
-
-    .respuestas-container{
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-wrap: wrap;
-        padding-top: 30px;
-        padding-bottom: 50px;
-        gap: 20px;
-
-
-        button{
-            width: 45%;
-            min-width: 200px;
-            height: 40px;
-            font-size: 16px;
-            border: none;
-            border-radius: 12px;
-            text-align: start;
-            padding: 0 15px;
-            color: var(--white);
-        }
-
-        .boton-pregunta{
-            background-color: var(--azure-blue);
-        }
-
-        .boton-preguntaSeleccion{
-            background-color: var(--electric-pink);
-        }
-    }
-
-    .verificarBoton-container{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        .verificarBoton{
-            min-width: 200px;
-            height: 40px;
-            font-size: 16px;
-            border: none;
-            border-radius: 12px;
-            text-align: center;
-            padding: 0 15px;
-            color: var(--white);
-            background-color: var(--shiny-green);
-        }
-    }
+    .pregunta-container{
+        width: 60%;
+        margin: 0 auto;
+        height: 100%;
     
+        h3{
+            padding-bottom: 10px;
+        }
+        
+        .preguntaImg-container{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            padding-bottom: 10px;
+
+            img{
+                text-align: center;
+                width: 70%;
+                max-height: 250px;
+                min-width: 180px;
+            }
+        }
+        
+    
+        .respuestas-container{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+            padding-top: 30px;
+            padding-bottom: 50px;
+            gap: 20px;
+    
+    
+            button{
+                width: 45%;
+                min-width: 180px;
+                height: 40px;
+                font-size: 16px;
+                border: none;
+                border-radius: 12px;
+                text-align: start;
+                padding: 0 15px;
+                color: var(--white);
+            }
+    
+            .boton-pregunta{
+                background-color: var(--azure-blue);
+            }
+    
+            .boton-preguntaSeleccion{
+                background-color: var(--electric-pink);
+            }
+        }
+    
+        .verificarBoton-container{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            .verificarBoton{
+                min-width: 200px;
+                height: 40px;
+                font-size: 16px;
+                border: none;
+                border-radius: 12px;
+                text-align: center;
+                padding: 0 15px;
+                color: var(--white);
+                background-color: var(--shiny-green);
+            }
+        }
+        
+    }
 }
+

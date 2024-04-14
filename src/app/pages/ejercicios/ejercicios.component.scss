@@ -24,6 +24,7 @@ main{
                 width: 70%;
                 max-height: 250px;
                 min-width: 180px;
+                object-fit: contain;
             }
         }
         
@@ -41,13 +42,21 @@ main{
             button{
                 width: 45%;
                 min-width: 180px;
-                height: 40px;
+                min-height: 40px;
                 font-size: 16px;
                 border: none;
                 border-radius: 12px;
                 text-align: start;
                 padding: 0 15px;
                 color: var(--white);
+
+                .imgRespuesta{
+                    min-width: 130px;
+                    width: 90%;
+                    object-fit: contain;
+                    max-height: 210px;
+                    padding: 10px;
+                }
             }
     
             .boton-pregunta{

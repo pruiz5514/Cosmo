@@ -3,6 +3,7 @@ export interface Preguntas{
     codigo: string
     id: number,
     competencia: string,
+    componente:string,
     enunciado: string,
     imgEnunciado: string |null,
     pregunta: string,
@@ -14,5 +15,6 @@ export interface Preguntas{
     imgC: string |null,
     d: string | number | null,
     imgD: string |null,
-    completed: boolean
+    completed: boolean,
+    respuesta_correcta:string
 }3

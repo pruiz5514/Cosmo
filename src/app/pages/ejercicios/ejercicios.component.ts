@@ -7,13 +7,14 @@ import { HeaderComponent } from '../../domains/shared/header/header.component';
 import { FooterComponent } from '../../domains/shared/footer/footer.component';
 import { filter } from 'rxjs/operators';
 import { CommonModule } from '@angular/common';
+import { NavComponent } from "../../domains/shared/nav/nav.component";
 
 @Component({
-  selector: 'app-ejercicios',
-  standalone: true,
-  imports: [SextoComponent,CommonModule, HeaderComponent, FooterComponent],
-  templateUrl: './ejercicios.component.html',
-  styleUrl: './ejercicios.component.scss'
+    selector: 'app-ejercicios',
+    standalone: true,
+    templateUrl: './ejercicios.component.html',
+    styleUrl: './ejercicios.component.scss',
+    imports: [NavComponent,SextoComponent, CommonModule, HeaderComponent, FooterComponent, NavComponent]
 })
 export class EjerciciosComponent implements OnInit {
   // constructor(route:ActivatedRoute){
@@ -26,6 +27,7 @@ export class EjerciciosComponent implements OnInit {
 
   nombreRuta: string | null = '';
   arrayFiltrado: any[] = [...this.preguntas]
+
 
   constructor(private route: ActivatedRoute) { }
 
@@ -40,11 +42,18 @@ export class EjerciciosComponent implements OnInit {
   }
 
  
-  isClickedButton: string | null = null;
+  isClickedButton:string | null = null;
 
   cambiarColor(opcion:string):void{
     this.isClickedButton = opcion
     console.log(this.isClickedButton)
   }
-   
+  
+  confirmacionEnvioRespuesta: boolean = false;
+
+  cambiarEstado(opcion:boolean):void{
+    this.confirmacionEnvioRespuesta = opcion
+    console.log(this.confirmacionEnvioRespuesta)
+  }
+
 }

@@ -3,6 +3,15 @@ nav {
     height: 75px;
     font-family: "Roboto", sans-serif;
     width: 100%;
+    
+    .container-fluid.elementos {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
 
     .elementosee{
         display: flex;
@@ -10,27 +19,28 @@ nav {
         flex-wrap: nowrap;
         align-items: center;
         justify-content: space-between;
-        width:100%;
-        
-        
+        width:90%;
+          
     }
     
 
     .elementos{
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
-
+           
         .leftNav{
             display: flex;
             align-items: center;
             width: 50%;
             height: 100%;
-    
+          
             .cosmoLogo-container{
                 width: 120px;
+                
             }
             .cosmoLogo{
                 width: 100%;
+                align-items: center;
             }
         }
     }

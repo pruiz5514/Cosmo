@@ -8,6 +8,7 @@ import { FooterComponent } from '../../domains/shared/footer/footer.component';
 import { filter } from 'rxjs/operators';
 import { CommonModule } from '@angular/common';
 import { NavComponent } from "../../domains/shared/nav/nav.component";
+import { ContadorService } from '../../domains/shared/services/contador.service';
 
 @Component({
     selector: 'app-ejercicios',
@@ -56,4 +57,12 @@ export class EjerciciosComponent implements OnInit {
     console.log(this.confirmacionEnvioRespuesta)
   }
 
+  private contadorService = inject(ContadorService);
+
+  agregarValor():void {
+    this.contadorService.agregarValor(100);
+  }
+  restarValor():void{
+    this.contadorService.restarValor(30);
+   }
 }

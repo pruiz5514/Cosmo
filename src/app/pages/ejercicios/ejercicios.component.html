@@ -38,11 +38,11 @@
             <button class="verificarBoton" (click)="cambiarEstado(true)"  [ngClass]="{'submit-boton': confirmacionEnvioRespuesta === true}">Verificar respuesta</button>
            
 
-            <div *ngIf="isClickedButton == arrayFiltrado[0].respuesta_correcta && (confirmacionEnvioRespuesta)" class="alert alert-success">
+            <div *ngIf="isClickedButton == arrayFiltrado[0].respuesta_correcta && (confirmacionEnvioRespuesta)" class="alert alert-success" [ngClass]="{'cambioContadorXP':agregarValor()}">
                 &nbsp;La respuesta es correcta!, +100XP
             </div>
 
-            <div *ngIf="isClickedButton && isClickedButton !== arrayFiltrado[0].respuesta_correcta && (confirmacionEnvioRespuesta)" class="alert alert-danger">
+            <div *ngIf="isClickedButton && isClickedButton !== arrayFiltrado[0].respuesta_correcta && (confirmacionEnvioRespuesta)" class="alert alert-danger" [ngClass]="{'cambioContadorXP':restarValor()}">
                 &nbsp;La respuesta es incorrecta, vuelve a intentar, -50 XP
             </div>
             

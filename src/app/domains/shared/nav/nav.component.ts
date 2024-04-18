@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLinkWithHref } from '@angular/router';
-
+import { ContadorService } from '../services/contador.service';
 
 @Component({
   selector: 'app-nav',
@@ -11,4 +11,5 @@ import { RouterLinkWithHref } from '@angular/router';
 })
 export class NavComponent {
 
+  constructor(public contadorService: ContadorService) {}
 }

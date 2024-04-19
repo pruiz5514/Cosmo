@@ -35,9 +35,12 @@
         
 
         <div class="verificarBoton-container">
-            <button class="verificarBoton" (click)="cambiarEstado(true)"  [ngClass]="{'submit-boton': confirmacionEnvioRespuesta === true}">Verificar respuesta</button>
-           
-
+            <div class="botones-container">
+                <button class="ayudaBoton" (click)="restarAyuda()">Solicitar ayuda</button>
+                <button class="verificarBoton" (click)="cambiarEstado(true)"  [ngClass]="{'submit-boton': confirmacionEnvioRespuesta === true}">Verificar respuesta</button>
+            </div>
+            
+            
             <div *ngIf="isClickedButton == arrayFiltrado[0].respuesta_correcta && (confirmacionEnvioRespuesta)" class="alert alert-success" [ngClass]="{'cambioContadorXP':agregarValor()}">
                 &nbsp;La respuesta es correcta!, +100XP
             </div>
@@ -51,7 +54,6 @@
             </div>
 
         </div>
-
 
     </section>
 </main>

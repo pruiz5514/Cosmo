@@ -71,4 +71,7 @@ export class EjerciciosComponent implements OnInit {
   restarValor():void{
     this.contadorService.restarValor(30);
    }
+   restarAyuda():void{
+    this.contadorService.contador_XP -= 30;
+   }
 }

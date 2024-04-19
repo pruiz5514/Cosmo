@@ -9,6 +9,7 @@ import { filter } from 'rxjs/operators';
 import { CommonModule } from '@angular/common';
 import { NavComponent } from "../../domains/shared/nav/nav.component";
 import { ContadorService } from '../../domains/shared/services/contador.service';
+import { LocalStorageService } from '../../domains/shared/services/local-storage.service';
 
 @Component({
     selector: 'app-ejercicios',
@@ -55,6 +56,11 @@ export class EjerciciosComponent implements OnInit {
   cambiarEstado(opcion:boolean):void{
     this.confirmacionEnvioRespuesta = opcion
     console.log(this.confirmacionEnvioRespuesta)
+
+    // La pregunta fue respondida, se almacena
+    if (this.nombreRuta != null){
+      localStorage.setItem(this.nombreRuta, "completo");
+    }
   }
 
   private contadorService = inject(ContadorService);

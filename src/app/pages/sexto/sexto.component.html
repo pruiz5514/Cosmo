@@ -4,8 +4,12 @@
         <h1>Ejercicios</h1>
         <div class="ejercicios-contenedor">
             <ul class="listaEjercicios">
-                <li *ngFor="let pregunta of preguntas">
-                    <a [routerLink]="['/ejercicios',pregunta.codigo]"><button class="butonEjercicios"> Ejercicio #{{pregunta.id}} </button></a>
+                <li *ngFor="let pregunta of preguntas" >
+                    <a [routerLink]="['/ejercicios',pregunta.codigo]">
+                        <button [disabled]=pregunta.completed [ngStyle]="{'background-color':getColor(pregunta.completed)}" class="butonEjercicios"> 
+                            Ejercicio #{{pregunta.id}} 
+                        </button>
+                    </a>
                 </li>
             </ul>
         </div>

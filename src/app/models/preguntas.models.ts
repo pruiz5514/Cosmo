@@ -17,4 +17,4 @@ export interface Preguntas{
     imgD: string |null,
     completed: boolean,
     respuesta_correcta:string
-}3
+}

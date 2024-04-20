@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class ContadorService {
 
-  private contador_XP: number=0;
+  contador_XP: number=0;
 
   getContador_XP() {
     return this.contador_XP;

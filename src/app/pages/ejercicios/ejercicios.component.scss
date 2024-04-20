@@ -2,6 +2,7 @@ main{
     min-height: calc(100vh - 75px);
     padding-top: 10px;
     padding-bottom: 40px;
+    margin-top: 100px;
 
     .pregunta-container{
         width: 60%;
@@ -72,16 +73,32 @@ main{
             width: 100%;
             display: flex;
             justify-content: center;
-            .verificarBoton{
-                min-width: 200px;
-                height: 40px;
-                font-size: 16px;
-                border: none;
-                border-radius: 12px;
-                text-align: center;
-                padding: 0 15px;
-                color: var(--white);
-                background-color: var(--shiny-green);
+
+            .botones-container{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+
+                .ayudaBoton, .verificarBoton{
+                    min-width: 200px;
+                    height: 40px;
+                    font-size: 16px;
+                    border: none;
+                    border-radius: 12px;
+                    text-align: center;
+                    padding: 0 15px;
+                }
+
+                .ayudaBoton{
+                    color: var(--white);
+                    background-color: var(--dark-green);
+                }
+
+                .verificarBoton{
+                    color: var(--white);
+                    background-color: var(--shiny-green);
+                }
             }
         }
         

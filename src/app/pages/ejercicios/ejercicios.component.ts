@@ -1,4 +1,6 @@
 import { Component, OnInit, inject } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { ActivatedRoute, Route } from '@angular/router';
 import { Observable, map} from 'rxjs';
 import { SextoComponent } from '../sexto/sexto.component';
@@ -10,13 +12,14 @@ import { CommonModule } from '@angular/common';
 import { NavComponent } from "../../domains/shared/nav/nav.component";
 import { ContadorService } from '../../domains/shared/services/contador.service';
 import { LocalStorageService } from '../../domains/shared/services/local-storage.service';
+import { ModalAyudaComponent } from '../../domains/shared/modal-ayuda/modal-ayuda.component';
 
 @Component({
     selector: 'app-ejercicios',
     standalone: true,
     templateUrl: './ejercicios.component.html',
     styleUrl: './ejercicios.component.scss',
-    imports: [NavComponent,SextoComponent, CommonModule, HeaderComponent, FooterComponent, NavComponent]
+    imports: [NavComponent,SextoComponent, CommonModule, HeaderComponent, FooterComponent, NavComponent,MatButtonModule, MatDialogModule]
 })
 export class EjerciciosComponent implements OnInit {
   // constructor(route:ActivatedRoute){
@@ -31,7 +34,7 @@ export class EjerciciosComponent implements OnInit {
   arrayFiltrado: any[] = [...this.preguntas]
 
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private _matDialog: MatDialog) { }
 
   filtrarPregunta(): void {
     this.arrayFiltrado = this.preguntas.filter(pregunta => pregunta.codigo === this.nombreRuta);
@@ -72,6 +75,7 @@ export class EjerciciosComponent implements OnInit {
     this.contadorService.restarValor(30);
    }
    restarAyuda():void{
-    this.contadorService.contador_XP -= 30;
+    this.contadorService.contador_XP -= 15;
+    this._matDialog.open(ModalAyudaComponent)
    }
 }

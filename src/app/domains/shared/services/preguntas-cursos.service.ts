@@ -25,7 +25,8 @@ export class PreguntasCursosService {
       d: 4,
       imgD: null,
       completed: false,
-      respuesta_correcta:'c'
+      respuesta_correcta:'c',
+      ayuda:"CCSCSCCCSCSDCSDC"
     },
     {
       grado: 'sexto',
@@ -45,9 +46,10 @@ export class PreguntasCursosService {
       d: '6.000 kW',
       imgD: null,
       completed: false,
-      respuesta_correcta:'a'
-
+      respuesta_correcta:'a',
+      ayuda:"CCSCSCCCSCSDCSDC"
     },
+
     {
       grado: 'sexto',
       codigo: 'sexto-3',
@@ -66,7 +68,8 @@ export class PreguntasCursosService {
       d: '20',
       imgD: null,
       completed: false,
-      respuesta_correcta:'d'
+      respuesta_correcta:'d',
+      ayuda:"CCSCSCCCSCSDCSDC"
     },
     {
       grado: 'sexto',
@@ -86,7 +89,8 @@ export class PreguntasCursosService {
       d: null,
       imgD: './../../../../assets/img/sextoImg/pregunta4/sexto4D.webp',
       completed: false,
-      respuesta_correcta:'c'
+      respuesta_correcta:'c',
+      ayuda:"CCSCSCCCSCSDCSDC"
     },
     {
       grado: 'sexto',
@@ -106,7 +110,8 @@ export class PreguntasCursosService {
       d: 'Sumar 10 m a la altura del edificio 5.',
       imgD: null,
       completed: false,
-      respuesta_correcta:'c'
+      respuesta_correcta:'c',
+      ayuda:"CCSCSCCCSCSDCSDC"
     },
     {
       grado: 'sexto',
@@ -126,7 +131,8 @@ export class PreguntasCursosService {
       d: null,
       imgD: './../../../../assets/img/sextoImg/pregunta6/sexto6D.webp',
       completed: false,
-      respuesta_correcta:'b'
+      respuesta_correcta:'b',
+      ayuda:"CCSCSCCCSCSDCSDC"
     },
 ])
   constructor() { }

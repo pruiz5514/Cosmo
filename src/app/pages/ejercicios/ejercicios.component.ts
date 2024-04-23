@@ -76,6 +76,8 @@ export class EjerciciosComponent implements OnInit {
    }
    restarAyuda():void{
     this.contadorService.contador_XP -= 15;
-    this._matDialog.open(ModalAyudaComponent)
+    this._matDialog.open(ModalAyudaComponent,{
+      data: {ayuda: this.arrayFiltrado}      
+    })
    }
 }

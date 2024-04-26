@@ -124,7 +124,6 @@ nav {
                     align-items: flex-start;
                     flex-direction: column;
                     
-                    
                     .nombreUsuario{
                         font-family: inherit;
                         color: var(--black);
@@ -138,8 +137,8 @@ nav {
                 
                         display:flex ;
                         flex-direction: row;
- 
                         gap:4px;
+
                         .progreso{
                             font-size:100%;
                             color:var(--neutral-gray);
@@ -148,8 +147,7 @@ nav {
                             width: 100%;
                         }
 
-                        .barraProgreso{
-                            background: linear-gradient(to right, rgb(3, 239, 98) 30%, rgb(217, 217, 226) 10%);
+                        .progressBarClass{
                             border-radius: 4px;
                             height: 4px;
                             margin-top: 4px;

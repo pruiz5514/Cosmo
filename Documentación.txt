@@ -1,0 +1,20 @@
+Funcionamiento de la Barra de Progreso
+
+La barra de progreso opera con dos servicios en el código: (1) el primero llamado MatProgressBarModule que se importa en el "nav.component.ts" usando la siguiente línea de código: "import { MatProgressBarModule } from '@angular/material/progress-bar';" y se coloca nuevamente en los "imports" del @Component como "MatProgressBarModule", y (2) el segundo llamado "ServicioPreguntasService" que se importa igualmente en el "nav.component.ts" usando la siguiente línea de código: "import { ServicioPreguntasService } from '../services/servicio-preguntas.service';".
+
+Más adelante dentro del mismo "nav.component.ts" en la sección del "Constructor" se incluye la siguiente parte lógica, en la cual se crean dos variables: preguntas totales y preguntas respondidas, para más adelante crear la función de porcentaje "getPorcentaje" que calcula cuántas preguntas se han respondido y da un porcentaje que va del 0% al 100%. Finalmente se agrega la función "alResponderPreguntas" que cuenta cuántas preguntas se han respondido, cuando la persona hace click en "Verificar respuesta".
+
+  preguntasTotales: number = 60;
+  preguntasRespondidas: number = 0;
+
+  getPorcentaje(): number {
+    return Math.round((this.preguntasRespondidas / this.preguntasTotales) * 100);
+  }
+
+  alResponderPreguntas(): void {
+    this.preguntasRespondidas++;
+
+Para la visualización de la Barra de Progreso se incluye en el HTML el siguiente código, que incluye la etiqueta predefinida "mat-progress-bar", y en la misma se configura como una barra de progreso "determinate" (la cual se usa cuando hay proceso de carga que puede ser rastreado y traducido a un indicador de la barra de progreso, que se llena de 0% a 100% y nunca decrece o se resetea) y se agrega el código "[value]="getPorcentaje()", el cual importa el porcentaje de preguntas respondidas desde el código funcional anteriormente escrito en "nav.component.ts" y se seleciona como color "primary", el cual es de color morado. Por último se agrega el código "<span class="progreso">Progreso {{getPorcentaje()}}% </span>" que muestra el texto "Progreso" y al lado el porcentaje de preguntas respondidas.
+
+<mat-progress-bar class="progressBarClass" mode="determinate" [value]="getPorcentaje()" color="primary"></mat-progress-bar>
+<span class="progreso">Progreso {{getPorcentaje()}}% </span>

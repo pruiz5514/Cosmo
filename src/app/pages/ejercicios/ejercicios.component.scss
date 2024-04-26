@@ -80,7 +80,7 @@ main{
                 justify-content: center;
                 gap: 20px;
 
-                .ayudaBoton, .verificarBoton{
+                .ayudaBoton, .verificarBoton, .siguiente{
                     min-width: 200px;
                     height: 40px;
                     font-size: 16px;
@@ -105,3 +105,14 @@ main{
     }
 }
 
+//
+ .cambioContadorXPVerdadero{
+                      /* Usa la propiedad 'background' con la URL del icono deseado */
+                      background: url('http://www.w3.org/2000/svg') no-repeat center center;
+                      /* Ajusta el tamaño del fondo según sea necesario */
+                  background-size: cover;
+                  width: 16px; 
+                  height:16px; 
+                  fill:currentColor;
+              }
+//

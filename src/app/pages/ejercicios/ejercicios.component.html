@@ -36,23 +36,38 @@
 
         <div class="verificarBoton-container">
             <div class="botones-container">
-                <button class="ayudaBoton" (click)="restarAyuda()">Solicitar ayuda</button>
-                <button class="verificarBoton" (click)="cambiarEstado(true)"  [ngClass]="{'submit-boton': confirmacionEnvioRespuesta === true}">Verificar respuesta</button>
+                <button type="button" class="ayudaBoton" (click)="restarAyuda()">Solicitar ayuda</button>
+                <button [disabled]="esCorrecta" type="button" class="verificarBoton" (click)="cambiarEstado(true)">Verificar respuesta</button>
+                <button  type="button" class="siguiente" (click)="irASiguiente()">Siguiente</button>
+            </div>
+       
+            <div *ngIf="esCorrecta" class="alert alert-success" [ngClass]="{'deshabilitaVerificarBoton': !esCorrecta}">
+                <i class="bi bi-patch-check"></i>&nbsp;La respuesta es correcta!, +100XP
             </div>
             
-            
-            <div *ngIf="isClickedButton == arrayFiltrado[0].respuesta_correcta && (confirmacionEnvioRespuesta)" class="alert alert-success" [ngClass]="{'cambioContadorXP':agregarValor()}">
-                &nbsp;La respuesta es correcta!, +100XP
+            <div *ngIf="isClickedButton && !esCorrecta && confirmacionEnvioRespuesta" class="alert alert-danger" [ngClass]="{'deshabilitaVerificarBoton': !esCorrecta}">
+                <i class="bi bi-patch-exclamation"></i>&nbsp;La respuesta es incorrecta, vuelve a intentar, -30 XP
             </div>
 
-            <div *ngIf="isClickedButton && isClickedButton !== arrayFiltrado[0].respuesta_correcta && (confirmacionEnvioRespuesta)" class="alert alert-danger" [ngClass]="{'cambioContadorXP':restarValor()}">
-                &nbsp;La respuesta es incorrecta, vuelve a intentar, -50 XP
+            <div *ngIf="!isClickedButton && confirmacionEnvioRespuesta" class="alert alert-warning" [ngClass]="{'deshabilitaVerificarBoton': !esCorrecta}">
+                <i class="bi bi-patch-exclamation"></i>&nbsp;Debes seleccionar una opción antes de verificar la respuesta. Inténtalo de nuevo!
             </div>
-            
-            <div *ngIf="!isClickedButton && isClickedButton !== arrayFiltrado[0].respuesta_correcta && confirmacionEnvioRespuesta" class="alert alert-warning">
-                &nbsp;Debes seleccionar una opción antes de verificar la respuesta. Inténtalo de nuevo!
+                
+       
+       
+            <!--     
+            <div *ngIf="esCorrecta" class="alert alert-success" [ngClass]="{'cambioContadorXP':agregarValor(),'deshabilitaVerificarBoton':cambiarEstado(false)}">
+                <i class="bi bi-patch-check"></i>&nbsp;La respuesta es correcta!, +100XP
             </div>
 
+            <div *ngIf="isClickedButton && !esCorrecta && (confirmacionEnvioRespuesta)" class="alert alert-danger" [ngClass]="{'cambioContadorXP':restarValor(),'deshabilitaVerificarBoton':cambiarEstado(false)}">
+                <i class="bi bi-patch-exclamation"></i>&nbsp;La respuesta es incorrecta, vuelve a intentar, -30 XP
+            </div>
+            
+            <div *ngIf="!isClickedButton && confirmacionEnvioRespuesta" class="alert alert-warning" [ngClass]="{'deshabilitaVerificarBoton':cambiarEstado(false)}">
+                <i class="bi bi-patch-exclamation"></i>&nbsp;Debes seleccionar una opción antes de verificar la respuesta. Inténtalo de nuevo!
+            </div>
+        -->
         </div>
 
     </section>
@@ -61,7 +76,7 @@
 
 <!--
 CON RADIO EN VEZ DE BUTTON 
-
+[disabled]="!this.arrayFiltrado[0].completed"
  <form class="pregunta-container">
         <h3>{{arrayFiltrado[0].enunciado}}</h3>
         <div class="preguntaImg-container">
@@ -106,13 +121,23 @@ CON RADIO EN VEZ DE BUTTON
         </div>
 
         <div class="verificarBoton-container">
-            <input class="verificarBoton" type="submit" value="Verificar respuesta" (click)="cambiarEstado(true)"
-            [ngClass]="{'submit-boton': confirmacionEnvioRespuesta === true}">
-
-            <div *ngIf="isClickedButton == arrayFiltrado[0].respuesta_correcta && (confirmacionEnvioRespuesta)" class="text-danger">
-                La respuesta es correcta!
+            
+            <div class="botones-container">
+                <button class="ayudaBoton" (click)="restarAyuda()">Solicitar ayuda</button>
+                <button class="verificarBoton" (click)="cambiarEstado(true)"  [ngClass]="{'submit-boton': confirmacionEnvioRespuesta === true}">Verificar respuesta</button>
+            </div>
+            
+            <div *ngIf="isClickedButton == arrayFiltrado[0].respuesta_correcta && (confirmacionEnvioRespuesta)" class="alert alert-success" [ngClass]="{'cambioContadorXP':agregarValor()}">
+                &nbsp;La respuesta es correcta!, +100XP
             </div>
 
+            <div *ngIf="isClickedButton && isClickedButton !== arrayFiltrado[0].respuesta_correcta && (confirmacionEnvioRespuesta)" class="alert alert-danger" [ngClass]="{'cambioContadorXP':restarValor()}">
+                &nbsp;La respuesta es incorrecta, vuelve a intentar, -30 XP
+            </div>
+            
+            <div *ngIf="!isClickedButton && isClickedButton !== arrayFiltrado[0].respuesta_correcta && confirmacionEnvioRespuesta" class="alert alert-warning">
+                &nbsp;Debes seleccionar una opción antes de verificar la respuesta. Inténtalo de nuevo!
+            </div>
 
         </div>
 
@@ -120,5 +145,73 @@ CON RADIO EN VEZ DE BUTTON
     </form>
 
 
+
+
+
+ULTIMITA VERSIÓN 25-04-2024
+
+
+
+
+<app-nav></app-nav>
+
+<main>
+    <section class="pregunta-container">
+        <h3>{{arrayFiltrado[0].enunciado}}</h3>
+        <div class="preguntaImg-container">
+            <img *ngIf="arrayFiltrado[0].imgEnunciado" [src]="arrayFiltrado[0].imgEnunciado" alt="Imagen sexto">
+        </div>
+
+        <h3>{{arrayFiltrado[0].pregunta}}</h3>
+
+        <div class="respuestas-container">
+            <button type="button" (click)="cambiarColor('a')" [ngClass]="{'boton-pregunta': isClickedButton !== 'a', 'boton-preguntaSeleccion': isClickedButton === 'a'}">
+                A.
+                <img class="imgRespuesta" *ngIf="arrayFiltrado[0].imgA" [src]="arrayFiltrado[0].imgA" alt="Imagen sexto">
+                <ng-container *ngIf="!arrayFiltrado[0].imgA">{{arrayFiltrado[0].a}}</ng-container>
+            </button>
+            <button type="button" (click)="cambiarColor('b')" [ngClass]="{'boton-pregunta': isClickedButton !== 'b', 'boton-preguntaSeleccion': isClickedButton === 'b'}">
+                B.
+                <img class="imgRespuesta" *ngIf="arrayFiltrado[0].imgB" [src]="arrayFiltrado[0].imgB" alt="Imagen sexto">
+                <ng-container *ngIf="!arrayFiltrado[0].imgB">{{arrayFiltrado[0].b}}</ng-container>
+            </button>
+            <button type="button" (click)="cambiarColor('c')" [ngClass]="{'boton-pregunta': isClickedButton !== 'c', 'boton-preguntaSeleccion': isClickedButton === 'c'}">
+                C.
+                <img class="imgRespuesta" *ngIf="arrayFiltrado[0].imgC" [src]="arrayFiltrado[0].imgC" alt="Imagen sexto">
+                <ng-container *ngIf="!arrayFiltrado[0].imgC">{{arrayFiltrado[0].c}}</ng-container>
+            </button>
+            <button type="button" (click)="cambiarColor('d')" [ngClass]="{'boton-pregunta': isClickedButton !== 'd', 'boton-preguntaSeleccion': isClickedButton === 'd'}">
+                D.
+                <img class="imgRespuesta" *ngIf="arrayFiltrado[0].imgD" [src]="arrayFiltrado[0].imgD" alt="Imagen sexto">
+                <ng-container *ngIf="!arrayFiltrado[0].imgD">{{arrayFiltrado[0].d}}</ng-container>
+            </button>
+        </div>
+           
+        
+
+        <div class="verificarBoton-container">
+            <div class="botones-container">
+                <button type="button" class="ayudaBoton" (click)="restarAyuda()">Solicitar ayuda</button>
+                <button [disabled]="esCorrecta" type="button" class="verificarBoton" (click)="cambiarEstado(true)"  [ngClass]="{'submit-boton': confirmacionEnvioRespuesta === true}">Verificar respuesta</button>
+                <button  type="button" class="siguiente" (click)="irASiguiente()">Siguiente</button>
+            </div>
+            
+            <div *ngIf="esCorrecta" class="alert alert-success" [ngClass]="{'cambioContadorXP':agregarValor(),'deshabilitaVerificarBoton':cambiarEstado(false)}">
+                <i class="bi bi-patch-check"></i>&nbsp;La respuesta es correcta!, +100XP
+            </div>
+
+            <div *ngIf="isClickedButton && !esCorrecta && (confirmacionEnvioRespuesta)" class="alert alert-danger" [ngClass]="{'cambioContadorXP':restarValor(),'deshabilitaVerificarBoton':cambiarEstado(false)}">
+                <i class="bi bi-patch-exclamation"></i>&nbsp;La respuesta es incorrecta, vuelve a intentar, -30 XP
+            </div>
+            
+            <div *ngIf="!isClickedButton && confirmacionEnvioRespuesta" class="alert alert-warning" [ngClass]="{'deshabilitaVerificarBoton':cambiarEstado(false)}">
+                <i class="bi bi-patch-exclamation"></i>&nbsp;Debes seleccionar una opción antes de verificar la respuesta. Inténtalo de nuevo!
+            </div>
+
+        </div>
+
+    </section>
+</main>
+<app-footer />
 
 -->

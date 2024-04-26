@@ -16,31 +16,29 @@ import { LocalStorageService } from '../../domains/shared/services/local-storage
   styleUrl: './sexto.component.scss'
 })
 
-
-export class SextoComponent implements OnInit{
+export class SextoComponent implements OnInit {
 
   private preguntasCurso = inject(PreguntasCursosService)
   preguntas = this.preguntasCurso.preguntasSexto
 
-  ngOnInit(): void {   
+  ngOnInit(): void {
     // Se recorren las preguntas vs cuáles han sido respondidas para marcarlas como realizadas
     for (let pregunta of this.preguntas) {
       pregunta.completed = this.retrieveFromLocalStorage(pregunta.codigo);
-    }    
+    }
   }
 
   // Valida si la pregunta fue respondida previamente
-  retrieveFromLocalStorage(numeroPregunta : string) : boolean {
+  retrieveFromLocalStorage(numeroPregunta: string): boolean {
     const value = localStorage.getItem(numeroPregunta);
-    if(value != null){
+    if (value != null) {
       return true;
     }
     return false;
   }
-
-
-  getColor(isCompleted : boolean){
-    if(isCompleted){
+  
+  getColor(isCompleted: boolean) {
+    if (isCompleted) {
       return 'grey';
     }
     return 'azure-blue';

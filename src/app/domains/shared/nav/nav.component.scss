@@ -127,12 +127,12 @@ nav {
                     flex-direction: column;
                     
                     
-                    .saludo{
+                    .nombreUsuario{
                         font-family: inherit;
                         color: var(--black);
                         font-size: 184%;
                         font-weight: 800;
-                        line-height: 1.5;
+                        line-height: 1;
                     }
                     
                     .littleOne{
@@ -171,6 +171,17 @@ nav {
     }
 
 
+    h5#offcanvasNavbarLabel {
+        font-size: xx-large;
+        margin-top: 13px;
+        font-weight: 500;
+    }
+
+    ul.navbar-nav.justify-content-end.flex-grow-1.pe-3 {
+        display: flex;
+        align-items: flex-start;
+    }
+    
 }
 
     /*

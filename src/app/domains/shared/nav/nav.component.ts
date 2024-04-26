@@ -3,11 +3,12 @@ import { RouterLinkWithHref } from '@angular/router';
 import { ContadorService } from '../services/contador.service';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { ServicioPreguntasService } from '../services/servicio-preguntas.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-nav',
   standalone: true,
-  imports: [RouterLinkWithHref, MatProgressBarModule],
+  imports: [RouterLinkWithHref, MatProgressBarModule, CommonModule],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.scss'
 })

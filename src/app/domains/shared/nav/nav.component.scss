@@ -13,7 +13,6 @@ nav {
         align-items: center;
     }
 
-
     .elementosee{
         display: flex;
         flex-direction: row;
@@ -23,7 +22,6 @@ nav {
         width:90%;
           
     }
-    
 
     .elementos{
         width: 100%;
@@ -138,8 +136,12 @@ nav {
                     }
                     
                     .littleOne{
-                        display:flex ;
-                        flex-direction: row;
+
+                        // Comento estas lineas para que el texto "Progreso" y el porcentaje se muestren en la misma línea
+
+                        // display:flex ;
+                        // flex-direction: row;
+ 
                         gap:4px;
                         .progreso{
                             font-size:100%;

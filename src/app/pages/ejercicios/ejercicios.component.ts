@@ -13,6 +13,7 @@ import { NavComponent } from "../../domains/shared/nav/nav.component";
 import { ContadorService } from '../../domains/shared/services/contador.service';
 import { LocalStorageService } from '../../domains/shared/services/local-storage.service';
 import { ModalAyudaComponent } from '../../domains/shared/modal-ayuda/modal-ayuda.component';
+import { ServicioPreguntasService } from '../../domains/shared/services/servicio-preguntas.service';
 
 @Component({
     selector: 'app-ejercicios',
@@ -34,7 +35,7 @@ export class EjerciciosComponent implements OnInit {
   arrayFiltrado: any[] = [...this.preguntas]
 
 
-  constructor(private route: ActivatedRoute, private _matDialog: MatDialog) { }
+  constructor(private route: ActivatedRoute, private _matDialog: MatDialog, private servicioPreguntasService: ServicioPreguntasService) {}
 
   filtrarPregunta(): void {
     this.arrayFiltrado = this.preguntas.filter(pregunta => pregunta.codigo === this.nombreRuta);
@@ -46,7 +47,6 @@ export class EjerciciosComponent implements OnInit {
     this.filtrarPregunta()
   }
 
- 
   isClickedButton:string | null = null;
 
   cambiarColor(opcion:string):void{
@@ -64,6 +64,7 @@ export class EjerciciosComponent implements OnInit {
     if (this.nombreRuta != null){
       localStorage.setItem(this.nombreRuta, "completo");
     }
+    this.servicioPreguntasService.incrementAnsweredQuestions();
   }
 
   private contadorService = inject(ContadorService);

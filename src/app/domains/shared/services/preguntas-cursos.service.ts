@@ -134,6 +134,27 @@ export class PreguntasCursosService {
       respuesta_correcta:'b',
       ayuda:"CCSCSCCCSCSDCSDC"
     },
+    {
+      grado: 'sexto',
+      codigo: 'sexto-10',
+      id: 10,
+      competencia: 'Comunicación',
+      componente:'Aleatorio',
+      enunciado: 'El administrador de un conjunto residencial hizo un sorteo para definir cuáles apartamentos pueden usar los parqueaderos. Después del sorteo hizo una afirmación:',
+      imgEnunciado: './../../../../assets/img/sextoImg/pregunta10.webp',
+      pregunta: '¿Cuál de las siguientes tablas podría mostrar el tiempo que apareció en pantalla la protagonista en cada película?',
+      a: '3 de cada 4 apartamentos tendrán acceso al parqueadero.',
+      imgA: null,
+      b: '20 de cada 15 apartamentos tendrán acceso al parqueadero.',
+      imgB: null,
+      c: '7 de cada 10 apartamentos tendrán acceso al parqueadero.',
+      imgC: null,
+      d: '10 de cada 3 apartamentos tendrán acceso al parqueadero.',
+      imgD: null,
+      completed: false,
+      respuesta_correcta:'a',
+      ayuda:"CCSCSCCCSCSDCSDC"
+    },
 ])
   constructor() { }
 }

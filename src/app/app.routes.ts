@@ -5,6 +5,7 @@ import { SextoComponent } from './pages/sexto/sexto.component'
 import { SeptimoComponent } from './pages/septimo/septimo.component'
 import { OctavoComponent } from './pages/octavo/octavo.component'
 import { EjerciciosComponent } from './pages/ejercicios/ejercicios.component';
+import { CertificadosComponent } from './pages/certificados/certificados.component';
 
 export const routes: Routes = [
     {
@@ -30,6 +31,12 @@ export const routes: Routes = [
     {
         path: 'ejercicios/:codigo',
         component: EjerciciosComponent
+    },
+
+    {
+        path:"certificados",
+        component: CertificadosComponent
+
     },
 
     //por defecto aparecerá la pagina de inicio  

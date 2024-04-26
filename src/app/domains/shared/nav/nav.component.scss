@@ -66,7 +66,6 @@ nav {
             flex-direction: column;
         }
 
-
         .agrupadorTitulosContador{
             -webkit-box-align: center;
             align-items: center;
@@ -88,7 +87,6 @@ nav {
          }
 
     }
-
 
     .rightNav{
         display: flex;
@@ -137,10 +135,9 @@ nav {
                     
                     .littleOne{
 
-                        // Comento estas lineas para que el texto "Progreso" y el porcentaje se muestren en la misma línea
-
-                        // display:flex ;
-                        // flex-direction: row;
+                
+                        display:flex ;
+                        flex-direction: row;
  
                         gap:4px;
                         .progreso{

@@ -7,11 +7,12 @@ import { Preguntas } from './../../models/preguntas.models'
 import { NavComponent } from '../../domains/shared/nav/nav.component';
 import { PreguntasCursosService } from './../../domains/shared/services/preguntas-cursos.service'
 import { LocalStorageService } from '../../domains/shared/services/local-storage.service';
+import { StarRatingComponent } from '../../domains/shared/star-rating/star-rating.component';
 
 @Component({
   selector: 'app-sexto',
   standalone: true,
-  imports: [NavComponent, FooterComponent, RouterLinkWithHref, CommonModule],
+  imports: [NavComponent, FooterComponent, RouterLinkWithHref, CommonModule, StarRatingComponent],
   templateUrl: './sexto.component.html',
   styleUrl: './sexto.component.scss'
 })

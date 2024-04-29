@@ -26,7 +26,8 @@ export class PreguntasCursosService {
       imgD: null,
       completed: false,
       respuesta_correcta:'c',
-      ayuda:"CCSCSCCCSCSDCSDC"
+      ayuda:"CCSCSCCCSCSDCSDC",
+      stars: 3
     },
     {
       grado: 'sexto',
@@ -47,7 +48,8 @@ export class PreguntasCursosService {
       imgD: null,
       completed: false,
       respuesta_correcta:'a',
-      ayuda:"CCSCSCCCSCSDCSDC"
+      ayuda:"CCSCSCCCSCSDCSDC",
+      stars: 3.5
     },
 
     {
@@ -69,7 +71,8 @@ export class PreguntasCursosService {
       imgD: null,
       completed: false,
       respuesta_correcta:'d',
-      ayuda:"CCSCSCCCSCSDCSDC"
+      ayuda:"CCSCSCCCSCSDCSDC",
+      stars: 4
     },
     {
       grado: 'sexto',
@@ -90,7 +93,8 @@ export class PreguntasCursosService {
       imgD: './../../../../assets/img/sextoImg/pregunta4/sexto4D.webp',
       completed: false,
       respuesta_correcta:'c',
-      ayuda:"CCSCSCCCSCSDCSDC"
+      ayuda:"CCSCSCCCSCSDCSDC",
+      stars: 4.5
     },
     {
       grado: 'sexto',
@@ -111,7 +115,8 @@ export class PreguntasCursosService {
       imgD: null,
       completed: false,
       respuesta_correcta:'c',
-      ayuda:"CCSCSCCCSCSDCSDC"
+      ayuda:"CCSCSCCCSCSDCSDC",
+      stars: 4.5
     },
     {
       grado: 'sexto',
@@ -132,7 +137,8 @@ export class PreguntasCursosService {
       imgD: './../../../../assets/img/sextoImg/pregunta6/sexto6D.webp',
       completed: false,
       respuesta_correcta:'b',
-      ayuda:"CCSCSCCCSCSDCSDC"
+      ayuda:"CCSCSCCCSCSDCSDC",
+      stars: 5
     },
     {
       grado: 'sexto',
@@ -153,7 +159,8 @@ export class PreguntasCursosService {
       imgD: null,
       completed: false,
       respuesta_correcta:'a',
-      ayuda:"CCSCSCCCSCSDCSDC"
+      ayuda:"CCSCSCCCSCSDCSDC",
+      stars: 5
     },
 ])
   constructor() { }

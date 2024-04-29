@@ -11,7 +11,6 @@ import { filter } from 'rxjs/operators';
 import { CommonModule } from '@angular/common';
 import { NavComponent } from "../../domains/shared/nav/nav.component";
 import { ContadorService } from '../../domains/shared/services/contador.service';
-import { LocalStorageService } from '../../domains/shared/services/local-storage.service';
 import { ModalAyudaComponent } from '../../domains/shared/modal-ayuda/modal-ayuda.component';
 import { ServicioPreguntasService } from '../../domains/shared/services/servicio-preguntas.service';
 import { Router } from '@angular/router';
@@ -83,9 +82,10 @@ export class EjerciciosComponent implements OnInit {
     this.servicioPreguntasService.incrementAnsweredQuestions();
   }
 
-  // suma experiencia en el contador XP
+  // suma experiencia en el contador XP y el contador de estrellas
   agregarValor(valor: number): void {
     this.contadorService.agregarValor(valor);
+    this.contadorService.agregarValorEstrellas(this.arrayFiltrado[0].stars);
   }
 
   // Resta puntos de experiencia en el contador XP

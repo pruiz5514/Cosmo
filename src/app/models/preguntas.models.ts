@@ -17,5 +17,6 @@ export interface Preguntas{
     imgD: string |null,
     completed: boolean,
     respuesta_correcta:string,
-    ayuda: string
+    ayuda: string,
+    stars: number
 }

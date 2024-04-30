@@ -12,7 +12,7 @@ footer{
         .leftFooter-container{
             display: flex;
             flex-direction: column;
-            width: 50%;
+            min-width: 50%;
             font-size: 16px;
             color: var(--platinum);
             padding-left: 10px;
@@ -24,7 +24,7 @@ footer{
         }
      
         .rightFooter-container{
-            width: 50%;
+            min-width: 50%;
      
             .socialMedias{
                 display: flex;
@@ -49,15 +49,54 @@ footer{
                 align-items: center;
                 width: 100%;
      
-                figure{
-                    img{
-                        width: 80%;
-                    }
+                img{
+                    max-width: 290px;
+                    min-width: 240px;
                 }
+                
                 
             }
         }
+    }   
+}
+
+@media (max-width: 767px){
+
+    footer{
+        .elementos{
+            flex-direction: column;
+            width: 80%;
+            margin: 0 auto;
+    
+            .leftFooter-container{
+                width: 100%;
+            }
+            
+            .rightFooter-container{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 25px;
+    
+                .socialMedias{
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .logoFooter-container{
+                    display: flex;
+                    justify-content: center;
+
+                    figure{
+                        img{
+                            width: 60%;
+                        }
+                    }
+                }
+            }
+        }
     }
- 
     
 }

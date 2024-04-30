@@ -3,6 +3,8 @@ main{
     width: 100%;
     height: calc(100vh - 75px);
     margin-top: 75px;
+    display: flex;
+    align-items: center;
 
     section{
         display: flex;
@@ -18,8 +20,9 @@ main{
         }
     
         .course-container{
-            width: 350px;
-            height: 390px;
+            min-width: 250px;
+            max-width: 350px;
+            max-height: 390px;
             padding: 15px;
             border-radius: 12px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
@@ -48,3 +51,27 @@ main{
     }
 }
 
+
+@media (max-width: 890px){
+    main{
+        section{
+            display: flex;
+            scroll-snap-type: x proximity;
+            overflow-x: auto;
+            overscroll-behavior-x: contain;
+            padding: 20px 60px;
+            justify-content: start;
+            width: 100%;
+    
+            .course-container{
+                scroll-snap-align: center;
+            }
+
+            .course-container{
+                min-width: 280px;
+                max-width: 350px;
+            }
+        }
+    }
+    
+}

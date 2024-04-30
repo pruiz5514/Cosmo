@@ -8,8 +8,23 @@ export class ServicioPreguntasService {
 
   private answeredQuestionsSubject = new BehaviorSubject<number>(0);
   answeredQuestions$ = this.answeredQuestionsSubject.asObservable();
+  private readonly STORAGE_KEY = 'answered_questions';
 
-  incrementAnsweredQuestions() {this.answeredQuestionsSubject.next(this.answeredQuestionsSubject.getValue() + 1); }
+  incrementAnsweredQuestions() {
+    const currentValue = this.answeredQuestionsSubject.getValue();
+  
+    this.answeredQuestionsSubject.next(currentValue + 1); 
+  
+    localStorage.setItem(this.STORAGE_KEY, String(currentValue + 1)); 
+  }
 
-  constructor() { }
+  constructor() {
+
+    const savedCount = localStorage.getItem(this.STORAGE_KEY);
+    if (savedCount !== null) {
+      this.answeredQuestionsSubject.next(+savedCount);
+    }
+
+  }
+
 }

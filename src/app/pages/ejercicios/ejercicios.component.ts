@@ -47,7 +47,6 @@ export class EjerciciosComponent implements OnInit {
     this.arrayFiltrado = this.preguntas.filter(pregunta => pregunta.codigo === this.nombreRuta);
   }
 
-
   ngOnInit(): void {
     const codigo$: Observable<string> = this.route.params.pipe(map((p) => p['codigo']));
     codigo$.subscribe((codigo) => {
@@ -59,7 +58,6 @@ export class EjerciciosComponent implements OnInit {
       this.confirmacionEnvioRespuesta = false;
     })
   }
-
 
   cambiarColor(opcion: string): void {
     this.isClickedButton = opcion
@@ -79,7 +77,6 @@ export class EjerciciosComponent implements OnInit {
     } else {
       this.restarValor(30);
     }
-    this.servicioPreguntasService.incrementAnsweredQuestions();
   }
 
   // suma experiencia en el contador XP y el contador de estrellas
@@ -117,6 +114,7 @@ export class EjerciciosComponent implements OnInit {
   irASiguiente() {
     const codigoSiguiente = this.siguientePregunta();
     this.router.navigate([`/ejercicios/${codigoSiguiente}`]);
+    this.servicioPreguntasService.incrementAnsweredQuestions();
   }
 
 }

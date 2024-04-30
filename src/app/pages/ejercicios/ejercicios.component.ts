@@ -79,7 +79,7 @@ export class EjerciciosComponent implements OnInit {
     }
   }
 
-  // suma experiencia en el contador XP y el contador de estrellas
+  // suma experiencia en el contador XP, el contador de estrellas e incrementa el contador de preguntas respondidas en la progress bar
   agregarValor(valor: number): void {
     this.contadorService.agregarValor(valor);
     this.contadorService.agregarValorEstrellas(this.arrayFiltrado[0].stars);

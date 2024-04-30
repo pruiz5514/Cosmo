@@ -22,7 +22,7 @@ export class NavComponent {
   //IMPORTANTE!!
   //Modificar esta parte según el número de preguntas que se suban!!
 
-  preguntasTotales: number = 6;
+  preguntasTotales: number = 8;
   preguntasRespondidas: number = 0;
 
   getPorcentaje(): number {

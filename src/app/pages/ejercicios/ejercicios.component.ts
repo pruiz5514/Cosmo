@@ -83,6 +83,7 @@ export class EjerciciosComponent implements OnInit {
   agregarValor(valor: number): void {
     this.contadorService.agregarValor(valor);
     this.contadorService.agregarValorEstrellas(this.arrayFiltrado[0].stars);
+    this.servicioPreguntasService.incrementAnsweredQuestions();
   }
 
   // Resta puntos de experiencia en el contador XP
@@ -114,7 +115,6 @@ export class EjerciciosComponent implements OnInit {
   irASiguiente() {
     const codigoSiguiente = this.siguientePregunta();
     this.router.navigate([`/ejercicios/${codigoSiguiente}`]);
-    this.servicioPreguntasService.incrementAnsweredQuestions();
   }
 
 }

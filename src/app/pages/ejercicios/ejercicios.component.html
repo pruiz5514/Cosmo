@@ -47,7 +47,7 @@
                 <button type="button" class="siguiente" (click)="irASiguiente()">Siguiente</button>
             </div>
 
-            <div *ngIf="esCorrecta" class="alert alert-success" [ngClass]="{'deshabilitaVerificarBoton': !esCorrecta}">
+            <div *ngIf="esCorrecta" class="alert alert-success notificacionAlerta" [ngClass]="{'deshabilitaVerificarBoton': !esCorrecta}">
                 <i class="bi bi-patch-check"></i>&nbsp;La respuesta es correcta!, +100XP
             </div>
 
@@ -56,7 +56,7 @@
                 <i class="bi bi-patch-exclamation"></i>&nbsp;La respuesta es incorrecta, vuelve a intentar, -30 XP
             </div>
 
-            <div *ngIf="!isClickedButton && confirmacionEnvioRespuesta" class="alert alert-warning"
+            <div *ngIf="!isClickedButton && confirmacionEnvioRespuesta" class="alert alert-warning notificacionAlerta"
                 [ngClass]="{'deshabilitaVerificarBoton': !esCorrecta}">
                 <i class="bi bi-patch-exclamation"></i>&nbsp;Debes seleccionar una opción antes de verificar la
                 respuesta. Inténtalo de nuevo!

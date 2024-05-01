@@ -11,6 +11,7 @@ main{
     
         h3{
             padding-bottom: 10px;
+            text-align: justify;
         }
         
         .preguntaImg-container{
@@ -104,6 +105,15 @@ main{
                     color: var(--white);
                     background-color: var(--shiny-green);
                 }
+
+                
+            }
+
+            .alert-danger, .alert-success, .alert-warning{
+                max-width: 750px;
+                min-width: 200px;
+                margin-top: 20px;
+                text-align: justify;
             }
         }
         

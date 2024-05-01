@@ -58,6 +58,7 @@ export class EjerciciosComponent implements OnInit {
     })
   }
 
+  // Asignacion de la respuesta elegida por el usuario, cambia la clase para poner un color difetente
   cambiarColor(opcion: string): void {
     this.isClickedButton = opcion
     console.log(this.isClickedButton)

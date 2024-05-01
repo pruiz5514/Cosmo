@@ -1,21 +1,19 @@
 main{
     display: flex;
-    padding: 20px 10px 30px 50px;
+    padding: 20px 0 30px 0;
     width: 100%;
-    height: calc(100vh - 75px);
+    min-height: calc(100vh - 75px);
     margin-top: 75px;
 
     section{
         width:75%;
-        height: 415px;
-        overflow-y: auto;
-        margin-right: 30px;
+        min-width: 200px;
+        height: auto;
         padding: 20px 15px;
         box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
         border-radius: 12px;
         margin: 0 auto;
         border: 1px solid #ccc;
-        scrollbar-width: none;
 
         h1{
             margin-bottom: 20px;
@@ -26,25 +24,34 @@ main{
             height: auto;
             
             .listaEjercicios{
+                width: 100%;
                 display: flex;
                 flex-direction: column;
                 gap: 15px;
                 list-style: none;
                 align-items: center;
-        
-                a{
-                    text-decoration: none;
+
+                li{
+                    width: 70%;
+                    a{
+                        text-decoration: none;
+
+                        .butonEjercicios{
+                            max-width: 600px;
+                            width: 100%;
+                            min-width: 160px;
+                            height: 40px;
+                            font-size: 16px;
+                            border: none;
+                            background-color: var(--azure-blue);
+                            color: var(--white);
+                            border-radius: 12px;
+                        }
+                    }
                 }
+                
         
-                .butonEjercicios{
-                    width: 500px;
-                    height: 40px;
-                    font-size: 16px;
-                    border: none;
-                    background-color: var(--azure-blue);
-                    color: var(--white);
-                    border-radius: 12px;
-                }
+                
             }
         }
     }
@@ -57,4 +64,13 @@ main{
     }
 
     
+}
+
+@media (max-width: 767px){
+    main{
+        section{
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
 }

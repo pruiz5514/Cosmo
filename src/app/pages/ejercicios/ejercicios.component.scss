@@ -71,8 +71,10 @@ main{
     
         .verificarBoton-container{
             width: 100%;
+            height: auto;
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
 
             .botones-container{
                 width: 100%;
@@ -116,3 +118,16 @@ main{
                   fill:currentColor;
               }
 //
+
+@media (max-width: 767px){
+    main{
+        .pregunta-container{
+            .verificarBoton-container{
+                width: 620px;
+                height: auto;
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+    }
+}

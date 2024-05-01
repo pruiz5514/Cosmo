@@ -40,11 +40,12 @@ export class EjerciciosComponent implements OnInit {
     private contadorService: ContadorService
   , private servicioPreguntasService: ServicioPreguntasService) {}
 
-
+// Se obtiene un array de tamaño uno que contiene informacion de la pregunta selccionada
   filtrarPregunta(): void {
     this.arrayFiltrado = this.preguntas.filter(pregunta => pregunta.codigo === this.nombreRuta);
   }
 
+  // Se obtiene la ruta
   ngOnInit(): void {
     const codigo$: Observable<string> = this.route.params.pipe(map((p) => p['codigo']));
     codigo$.subscribe((codigo) => {

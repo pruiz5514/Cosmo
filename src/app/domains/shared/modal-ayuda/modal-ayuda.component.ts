@@ -1,6 +1,6 @@
-import { Component, Inject, inject } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialog, MatDialogRef } from '@angular/material/dialog';
-import { PreguntasCursosService } from '../services/preguntas-cursos.service';
+import { Component, Inject } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+
 
 
 @Component({

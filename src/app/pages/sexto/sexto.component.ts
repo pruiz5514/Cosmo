@@ -3,16 +3,15 @@ import { RouterLinkWithHref } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '../../domains/shared/header/header.component';
 import { FooterComponent } from '../../domains/shared/footer/footer.component';
-import { Preguntas } from './../../models/preguntas.models'
-import { NavComponent } from '../../domains/shared/nav/nav.component';
-import { PreguntasCursosService } from './../../domains/shared/services/preguntas-cursos.service'
+import { Preguntas } from './../../models/preguntas.models';
+import { PreguntasCursosService } from './../../domains/shared/services/preguntas-cursos.service';
 import { LocalStorageService } from '../../domains/shared/services/local-storage.service';
 import { StarRatingComponent } from '../../domains/shared/star-rating/star-rating.component';
 
 @Component({
   selector: 'app-sexto',
   standalone: true,
-  imports: [NavComponent, FooterComponent, RouterLinkWithHref, CommonModule, StarRatingComponent],
+  imports: [HeaderComponent, FooterComponent, RouterLinkWithHref, CommonModule, StarRatingComponent],
   templateUrl: './sexto.component.html',
   styleUrl: './sexto.component.scss'
 })

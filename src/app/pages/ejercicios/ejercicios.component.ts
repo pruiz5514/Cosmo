@@ -1,15 +1,13 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
-import { ActivatedRoute, Route } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { Observable, map } from 'rxjs';
 import { SextoComponent } from '../sexto/sexto.component';
 import { PreguntasCursosService } from '../../domains/shared/services/preguntas-cursos.service';
 import { HeaderComponent } from '../../domains/shared/header/header.component';
 import { FooterComponent } from '../../domains/shared/footer/footer.component';
-import { filter } from 'rxjs/operators';
 import { CommonModule } from '@angular/common';
-import { NavComponent } from "../../domains/shared/nav/nav.component";
 import { ContadorService } from '../../domains/shared/services/contador.service';
 import { ModalAyudaComponent } from '../../domains/shared/modal-ayuda/modal-ayuda.component';
 import { ServicioPreguntasService } from '../../domains/shared/services/servicio-preguntas.service';
@@ -20,7 +18,7 @@ import { Router } from '@angular/router';
   standalone: true,
   templateUrl: './ejercicios.component.html',
   styleUrl: './ejercicios.component.scss',
-  imports: [NavComponent, SextoComponent, CommonModule, HeaderComponent, FooterComponent, NavComponent, MatButtonModule, MatDialogModule]
+  imports: [ SextoComponent, CommonModule, HeaderComponent, FooterComponent, MatButtonModule, MatDialogModule]
 })
 export class EjerciciosComponent implements OnInit {
   // constructor(route:ActivatedRoute){

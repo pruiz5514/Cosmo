@@ -1,6 +1,6 @@
-import { Injectable, signal } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Preguntas } from '../../../models/preguntas.models';
-import { url } from 'inspector';
+
 
 @Injectable({
   providedIn: 'root'
@@ -144,6 +144,50 @@ export class PreguntasCursosService {
       grado: 'sexto',
       codigo: 'sexto-7',
       id: 7,
+      competencia: 'Razonamiento',
+      componente:'Aleatorio',
+      enunciado: 'En la feria estudiantil se venden dos tipos de pan: pan rollo y pan francés. El registro de ventas está dado en la siguiente tabla.',
+      imgEnunciado: './../../../../assets/img/sextoImg/pregunta7/pregunta7.webp',
+      pregunta: 'De acuerdo con esta información, ¿cuál gráfica representa las ventas de pan rollo y pan francés en la feria estudiantil?',
+      a: null,
+      imgA: './../../../../assets/img/sextoImg/pregunta7/sexto7A.webp',
+      b: null,
+      imgB: './../../../../assets/img/sextoImg/pregunta7/sexto7B.webp',
+      c: null,
+      imgC: './../../../../assets/img/sextoImg/pregunta7/sexto7C.webp',
+      d: null,
+      imgD: './../../../../assets/img/sextoImg/pregunta7/sexto7D.webp',
+      completed: false,
+      respuesta_correcta:'a',
+      ayuda:"CCSCSCCCSCSDCSDC",
+      stars: 5
+    },
+    {
+      grado: 'sexto',
+      codigo: 'sexto-8',
+      id: 8,
+      competencia: 'Razonamiento',
+      componente:'Aleatorio',
+      enunciado: 'En la feria estudiantil se venden dos tipos de pan: pan rollo y pan francés. El registro de ventas está dado en la siguiente tabla.',
+      imgEnunciado: './../../../../assets/img/sextoImg/pregunta7/pregunta7.webp',
+      pregunta: 'De acuerdo con esta información, ¿cuál gráfica representa las ventas de pan rollo y pan francés en la feria estudiantil?',
+      a: null,
+      imgA: './../../../../assets/img/sextoImg/pregunta7/sexto7A.webp',
+      b: null,
+      imgB: './../../../../assets/img/sextoImg/pregunta7/sexto7B.webp',
+      c: null,
+      imgC: './../../../../assets/img/sextoImg/pregunta7/sexto7C.webp',
+      d: null,
+      imgD: './../../../../assets/img/sextoImg/pregunta7/sexto7D.webp',
+      completed: false,
+      respuesta_correcta:'a',
+      ayuda:"CCSCSCCCSCSDCSDC",
+      stars: 5
+    },
+    {
+      grado: 'sexto',
+      codigo: 'sexto-9',
+      id: 9,
       competencia: 'Razonamiento',
       componente:'Aleatorio',
       enunciado: 'En la feria estudiantil se venden dos tipos de pan: pan rollo y pan francés. El registro de ventas está dado en la siguiente tabla.',

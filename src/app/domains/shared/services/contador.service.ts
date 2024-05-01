@@ -14,7 +14,7 @@ export class ContadorService {
   private readonly CONTADOR_STAR_STORAGE_KEY = 'contadorEstrellas';
 
   constructor() {
-    // Intenta recuperar el valor del contador de localStorage
+    // Recupera el valor del contador de localStorage
     const storedValue = localStorage.getItem(this.CONTADOR_STORAGE_KEY);
     const initialValue = storedValue ? parseInt(storedValue, 10) : 0;
     this.contadorXPSubject = new BehaviorSubject<number>(initialValue);

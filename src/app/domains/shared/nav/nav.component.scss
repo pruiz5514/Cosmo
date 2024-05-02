@@ -129,7 +129,7 @@ nav {
                         color: var(--black);
                         font-size: 184%;
                         font-weight: 800;
-                        line-height: 1;
+                        line-height: 0.5;
                     }
                     
                     .littleOne{
@@ -179,32 +179,61 @@ nav {
     
 }
 
-    /*
-    position: fixed;
-    top: 75px;
-    left: 0;
-    right: 0;
-    background: red;
+
+@media (max-width: 1023px ){
+    nav .contadores {
+        gap: 0px;  
+    }
+}
+
+@media (max-width: 854px ) {
+    nav .rightNav .bigOne .nombreUsuario {
+        
+        font-size: 150%;
+        line-height: 0.5;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 415px ){
+    nav .rightNav .bigOne .nombreUsuario {
+        margin-top: 20px;
+        font-size: 148%;
+    }
+    nav .elementos .leftNav .cosmoLogo {
+        width: 80%;    
+    }
+    
+    nav .contadores .numeros {
+        font-size: 84%;
+        line-height: 0.5;
+    }
+    
+    main {
+        margin-top: 100px;
+    }
+   
+    nav .contadores {
+        display: flex;
+        gap: 24px;
+        flex-direction: row;
+        margin: -28px;
+        padding: 26px;
+        width: 285.075px;
+        height: 61px;
+        align-content: center;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .container-fluid.elementos {
+        background-color: white;
+    }
+    .container-fluid.elementos {
+        height: 100px;
+    }
 
 
-            button.navbar-toggler:active,
-            button.navbar-toggler:focus,
-            button.navbar-toggler:focus-within,
-            button.navbar-toggler:target,
-            button.navbar-toggler:focus-visible,
-            button.navbar-toggler:visited,
-            button.navbar-toggler:hover,
-            button.navbar-toggler::before,
-            button.navbar-toggler::after,
-            button.navbar-toggler-icon:focus {
-                outline: none;
-                box-shadow: none ;
-                border: none;
-                
-            }
-
-
-
-
-
-    */
+    
+}

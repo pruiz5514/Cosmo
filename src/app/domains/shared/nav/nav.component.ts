@@ -22,7 +22,7 @@ export class NavComponent implements OnInit{
   preguntasRespondidas: number = 0;
 
   constructor(public contadorService: ContadorService, private servicioPreguntasService: ServicioPreguntasService) {
-    this.preguntasTotales = 8; // Assuming 8 questions
+    this.preguntasTotales = 10; // asumiendo 10 preguntas totales
     this.preguntasRespondidas = this.countAnsweredQuestions();
   }
 

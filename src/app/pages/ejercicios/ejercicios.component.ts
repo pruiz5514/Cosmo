@@ -114,7 +114,11 @@ export class EjerciciosComponent implements OnInit {
   // Redirige a la siguiente pregunta
   irASiguiente() {
     const codigoSiguiente = this.siguientePregunta();
+    if (codigoSiguiente ===''){
+      this.router.navigate([`/sexto`]);
+    } else {
     this.router.navigate([`/ejercicios/${codigoSiguiente}`]);
   }
+}
 
 }

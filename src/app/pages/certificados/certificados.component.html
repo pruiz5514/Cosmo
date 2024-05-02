@@ -1,12 +1,15 @@
-<div class="certificado">
-    <h1>Certificado</h1>
+<main>
+    <div class="certificado">
+        <h1>Certificado</h1>
+    
+        <p class ="mensaje">Felicidades, {{nombre}}, por responder correctamente a las preguntas. Tu conocimiento y dedicación te hacen
+            merecedor de este certificado. ¡Sigue así! </p>
+    
+            <p class="fecha">Este certificado se expide en la fecha,{{fecha}}</p>
+    
+    </div>
 
-    <p class ="mensaje">Felicidades, {{nombre}}, por responder correctamente a las preguntas. Tu conocimiento y dedicación te hacen
-        merecedor de este certificado. ¡Sigue así! </p>
+    <p>Para imprimir tu certificado da click al siguiente boton </p>
+    <button type="button" class="certificado-button" (click)="generar()"> Descargar certificado</button>
+</main>
 
-        <p class="fecha">Este certificado se expide en la fecha,{{fecha}}</p>
-
-</div>
-
-<p>Para imprimir tu certificado da click al siguiente boton </p>
-<button class="certificado-button" (click)="generar()"> Generar certificado</button>

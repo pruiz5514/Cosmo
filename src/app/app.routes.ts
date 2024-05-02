@@ -34,7 +34,7 @@ export const routes: Routes = [
     },
 
     {
-        path:"certificados",
+        path:'certificado',
         component: CertificadosComponent
 
     },

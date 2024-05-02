@@ -1,55 +1,66 @@
-.certificado {
-    margin-top: 60px;
-    width: 500px;
-    height: 380px;
-
-
-    border: 1px solid red;
-    color: var(--black);
+main{
+    padding: 15px 0;
+    width: 100%;
+    height: calc(100vh - 145px);
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+
+    .certificado {
+        margin-top: 60px;
+        width: 500px;
+        height: 380px;
 
 
-}
+        border: 1px solid red;
+        color: var(--black);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
 
-.certificado-button {
+         
+            .fecha {
+                
+                font-size: 15px;
+                font-style: italic;
+            }
+            .mensaje{
+                margin-bottom: 30px;
+                font-size: 25px;
+                
+            }
+    }
 
-
-
-    margin-top: 30px;
-    width: 270px;
-    height: 50px;
-    font-size: 20px;
-
-    border: none;
-    border-radius: 15px;
-    background-color: var(--azure-blue);
-    color: var(--white);
-    cursor: pointer;
-
-}
-
-.certificado h1 {
-    font-weight: bold;
-    font-size: 50px;
-    margin-bottom: 50px;
-    font-style: italic;
-}
+    .certificado-button {
 
 
 
+        margin-top: 30px;
+        width: 270px;
+        height: 50px;
+        font-size: 20px;
+
+        border: none;
+        border-radius: 15px;
+        background-color: var(--azure-blue);
+        color: var(--white);
+        cursor: pointer;
+
+    }
+
+    .certificado h1 {
+        font-weight: bold;
+        font-size: 50px;
+        margin-bottom: 50px;
+        font-style: italic;
+    }
 
 
 
-.fecha {
-    
-    font-size: 15px;
-    font-style: italic;
-}
-.mensaje{
-    margin-bottom: 30px;
-    font-size: 25px;
-    
+
+
+
+
 }

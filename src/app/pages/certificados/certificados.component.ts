@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './certificados.component.scss'
 })
 export class CertificadosComponent {
-  nombre = "jaunito"
+  nombre = "Juan Perez"
   fecha = new Date()
 
   

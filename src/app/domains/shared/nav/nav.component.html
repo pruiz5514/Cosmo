@@ -13,7 +13,7 @@
       <section class="contadores">
         <div class="contadorEstrellas">
           <span class="agrupadorTituloContador"><span>Total Estrellas </span> <i class="bi bi-star"></i></span>
-          <span class="numeros">{{contadorService.contadorEstrellas$ | async}} / 35</span>
+          <span class="numeros">{{contadorService.contadorEstrellas$ | async}} / 100</span>
         </div>
 
         <div class="contadorXp">
@@ -64,22 +64,27 @@
           
           <li class="nav-item">
             <a class="nav-link" aria-current="page" routerLink="/inicio" routerLinkActive="active"
-              ariaCurrentWhenActive="page"><i class="bi bi-person-gear"></i> Perfil</a>
+              ariaCurrentWhenActive="page"><i class="bi bi-person-gear"></i> &nbsp;&nbsp; Perfil</a>
           </li>
   
           <li class="nav-item">
-                <a class="nav-link" aria-current="page" routerLink="/inicio" routerLinkActive="active"
-                  ariaCurrentWhenActive="page"><i class="bi bi-graph-up"></i> Estadísticas</a>
+                <a class="nav-link" aria-current="page" routerLink="/sexto" routerLinkActive="active"
+                  ariaCurrentWhenActive="page"><i class="bi bi-ui-checks-grid"></i> &nbsp;&nbsp; Ejercicios</a>
           </li>
           
           <li class="nav-item">
             <a class="nav-link" aria-current="page" routerLink="/inicio" routerLinkActive="active"
-              ariaCurrentWhenActive="page"><i class="bi bi-award"></i> Certificado</a>
+              ariaCurrentWhenActive="page"><i class="bi bi-graph-up"></i> &nbsp;&nbsp; Estadísticas</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" routerLink="/inicio" routerLinkActive="active"
+              ariaCurrentWhenActive="page"><i class="bi bi-award"></i> &nbsp;&nbsp; Certificado</a>
           </li>
 
           <li class="nav-item">
             <a class="nav-link" routerLink="/" routerLinkActive="active" 
-            ariaCurrentWhenActive="page"><i class="bi bi-box-arrow-right"></i> Cerrar sesión</a>
+            ariaCurrentWhenActive="page"><i class="bi bi-box-arrow-right"></i> &nbsp;&nbsp; Cerrar sesión</a>
           </li>
         </ul>
 

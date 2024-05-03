@@ -26,7 +26,7 @@ export class PreguntasCursosService {
       imgD: null,
       completed: false,
       respuesta_correcta:'c',
-      ayuda:"CCSCSCCCSCSDCSDC",
+      ayuda:"Para resolver el ejercicio, Emilia debe dividir el total de 48 fichas entre los 8 jugadores para determinar cuántas fichas corresponden a cada uno. La operación matemática que necesitas realizar es una división simple: fichas por jugador=48​/8. Al efectuar esta división, obtendrás la cantidad de fichas que cada jugador debe recibir. Es importante que realices la operación por ti mismo para practicar tus habilidades de resolución de problemas. ¡Espero que esto te ayude!",
       stars: 3
     },
     {
